@@ -1,7 +1,7 @@
 const loader_utils = require('loader-utils');
 const fs = require('fs'); 
 
-var componentReg = new RegExp(/<[A-Z]([^\/>]*)+\s?\/>/,"g");
+var componentReg = new RegExp(/<[A-Z]([^>]*)+\s?\/>/,"g");
 var componentNameReg = /(?<=<)[A-Z]\w+/;
 var argumentReg = new RegExp(/[A-Za-z]\w+=(("([^"]*)"|\d+)|('([^']*)'|\d+))/,"g");
 var templateReg = new RegExp(/{([A-za-z])\w+}/,"g");
