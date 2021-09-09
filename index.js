@@ -15,6 +15,8 @@ function injectArgs(component,args) {
             if(args[key]){
                 return args[key]
             }
+
+            return ''
         });
     }else{
         parsedComp = component; 
@@ -56,6 +58,12 @@ module.exports = function (html) {
         const content = fs.readFileSync(`${path}/${file}`,'utf8');
 
         components[componentName] = content;
+    });
+
+    Object.keys(components).forEach(key=>{
+        const content = components[key];
+        const newContent = injector(content,components);
+        components[key] = newContent;
     });
 
 
