@@ -9,7 +9,14 @@
   "author": "Imran-S-heikh",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-react": "^7.14.5",
+    "chokidar": "^3.5.2",
     "fs": "^0.0.1-security",
-    "loader-utils": "^2.0.0"
+    "loader-utils": "^2.0.0",
+    "microjob": "^0.7.0"
+  },
+  "devDependencies": {
+    "react-dom": "^17.0.2"
   }
 }
